@@ -1,0 +1,62 @@
+1️⃣ Array Traversal
+
+Traverse (visit) and print all elements of an array.
+
+📖 Explanation
+
+Array traversal means visiting each element once.
+
+for x in a goes through elements one by one.
+
+print(x) prints the current element.
+
+⏱️ Interview Insight
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
+
+🎤 How to Explain in Interview
+
+“I traverse the array once using a loop to access and process each element.”
+
+2️⃣ Reverse Array (Basic)
+
+
+Reverse the given array.
+
+)
+
+📖 Explanation
+
+[::-1] means:
+
+start → end
+
+step = -1 (reverse direction)
+
+It returns a new reversed array.
+
+⏱️ Interview Insight
+
+Time Complexity: O(n)
+
+Space Complexity: O(n) (new array created)
+
+🎤 How to Explain in Interview
+
+“I used Python slicing to reverse the array in linear time.”
+
+🎤 FAANG Interview Round (Professional Answers)
+
+Q1. What is array traversal?
+A: Accessing each element of an array exactly once to read or modify it.
+
+Q2. Can arrays be traversed backwards?
+A: Yes, by iterating from the last index to the first.
+
+Q3. Is slicing the best way to reverse an array?
+A: It’s concise and readable, but uses extra space.
+
+Q4. How to reverse without extra space?
+A: By swapping elements using two pointers.
