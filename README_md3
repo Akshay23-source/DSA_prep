@@ -1,0 +1,86 @@
+📘 Topic: Arrays (Final – Core Interview Patterns)
+🎯 Focus Companies: Google, Amazon, Microsoft, Meta, Netflix
+✅ Today’s Sub-Topics (IN DEPTH)
+
+1️⃣ Two Sum (Array)
+2️⃣ Kadane’s Algorithm – Maximum Subarray Sum
+
+1️⃣ Two Sum (Array)
+🔹 Problem
+
+Given an array and a target, check if any two numbers sum to the target.
+
+🧠 Python Code (5 lines)
+a=[2,7,11,15]; t=9
+s=set()
+for x in a:
+    if t-x in s: print(True); break
+    s.add(x)
+
+📖 Explanation
+
+We use a set to store numbers we have already seen.
+
+For each number x, we check if target - x exists in the set.
+
+If yes → pair found.
+
+If no → store x and continue.
+
+⏱️ Interview Insight
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)
+
+🎤 How to Explain in Interview
+
+“I used hashing to reduce the time complexity from O(n²) to O(n) by storing visited elements.”
+
+2️⃣ Kadane’s Algorithm (Maximum Subarray Sum)
+🔹 Problem
+
+Find the maximum sum of a contiguous subarray.
+
+🧠 Python Code (4 lines)
+a=[-2,1,-3,4,-1,2,1]
+s=m=a[0]
+for x in a[1:]:
+    s=max(x,s+x); m=max(m,s)
+print(m)
+
+📖 Explanation
+
+s stores the current subarray sum.
+
+At each element, we decide:
+
+start new subarray (x)
+
+or extend previous (s + x)
+
+m keeps track of the maximum sum found so far.
+
+⏱️ Interview Insight
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
+
+🎤 How to Explain in Interview
+
+“Kadane’s algorithm uses dynamic programming to track the best subarray ending at each index.”
+
+🎤 FAANG Interview Round (Professional Answers)
+
+Q1. Why is Two Sum important?
+A: It tests hashing and optimization from brute force to linear time.
+
+Q2. Can Two Sum be solved without extra space?
+A: Yes, using sorting + two pointers, but hashing is faster.
+
+Q3. What does Kadane’s algorithm solve?
+A: Maximum sum contiguous subarray.
+
+Q4. Why Kadane is O(n)?
+A: Each element is processed exactly once.
