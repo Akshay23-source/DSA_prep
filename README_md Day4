@@ -1,0 +1,77 @@
+📘 Topic: Strings
+🎯 Focus Companies: Google, Amazon, Apple, Adobe, Meta
+✅ Today’s Sub-Topics (IN DEPTH)
+
+1️⃣ Palindrome Check
+2️⃣ String Reverse
+
+1️⃣ Palindrome Check
+🔹 Problem
+
+Check whether a given string is a palindrome
+(A string that reads the same forward and backward)
+
+🧠 Python Code (2 lines)
+s = "madam"
+print(s == s[::-1])
+
+📖 Explanation
+
+s[::-1] creates the reversed version of the string.
+
+We compare the original string with its reverse.
+
+If both are equal → it is a palindrome.
+
+⏱️ Interview Insight
+
+Time Complexity: O(n)
+
+Space Complexity: O(n) (new reversed string)
+
+🎤 How to Explain in Interview
+
+“I reverse the string using slicing and compare it with the original to check for palindrome.”
+
+2️⃣ String Reverse
+🔹 Problem
+
+Reverse a given string.
+
+🧠 Python Code (1 line)
+s = "hello"
+print(s[::-1])
+
+📖 Explanation
+
+[::-1] tells Python to:
+
+Start from the end
+
+Move backward one step at a time
+
+It returns a new reversed string.
+
+⏱️ Interview Insight
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)
+
+🎤 How to Explain in Interview
+
+“Python slicing allows reversing a string in a single readable line.”
+
+🎤 FAANG Interview Round (Professional Answers)
+
+Q1. What is a palindrome?
+A: A string that remains the same when reversed.
+
+Q2. Can palindrome be checked without reversing?
+A: Yes, using two pointers from start and end.
+
+Q3. Are strings mutable in Python?
+A: No, strings are immutable.
+
+Q4. Why slicing is popular in interviews?
+A: It shows clarity and Python proficiency.
