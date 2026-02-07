@@ -1,0 +1,98 @@
+🎯 Focus Companies: Google, Amazon, Adobe, Meta, Apple
+✅ Today’s Sub-Topics (IN DEPTH)
+
+1️⃣ Anagram Check
+2️⃣ Substring Basics
+
+1️⃣ Anagram Check
+🔹 Problem
+
+Check if two strings are anagrams
+(They contain the same characters with the same frequency)
+
+🧠 Python Code (2 lines)
+s1="listen"; s2="silent"
+print(sorted(s1)==sorted(s2))
+
+📖 Explanation
+
+sorted(s1) sorts characters of the first string.
+
+sorted(s2) sorts characters of the second string.
+
+If both sorted lists are equal → strings are anagrams.
+
+🧠 Simple Example (Think Like This)
+
+"listen" → ['e','i','l','n','s','t']
+
+"silent" → ['e','i','l','n','s','t']
+
+Same characters → Anagram
+
+⏱️ Interview Insight
+
+Time Complexity: O(n log n)
+
+Space Complexity: O(n)
+
+🎤 Interview Explanation
+
+“I sort both strings and compare them. If they match, the strings are anagrams.”
+
+2️⃣ Substring Basics
+🔹 Problem
+
+Print all substrings of a string.
+
+🧠 Python Code (4 lines)
+s="abc"
+for i in range(len(s)):
+    for j in range(i+1,len(s)+1):
+        print(s[i:j])
+
+🖥️ Output
+a
+ab
+abc
+b
+bc
+c
+
+📖 Explanation
+
+A substring is a continuous part of a string.
+
+Outer loop selects the start index.
+
+Inner loop selects the end index.
+
+s[i:j] extracts the substring.
+
+⏱️ Interview Insight
+
+Time Complexity: O(n²)
+
+Used in:
+
+Sliding window
+
+Longest substring problems
+
+🎤 Interview Explanation
+
+“I fix a starting index and expand the ending index to generate all continuous substrings.”
+
+🎤 FAANG Interview Round (Professional Answers)
+
+Q1. What is an anagram?
+A: Two strings that contain the same characters with the same frequency.
+
+Q2. Difference between substring and subsequence?
+A: Substring is continuous; subsequence may skip characters.
+
+Q3. Can anagram be solved without sorting?
+A: Yes, using hashing (frequency count).
+
+Q4. Where are substrings used?
+A: Sliding window, pattern matching, longest substring problems.
