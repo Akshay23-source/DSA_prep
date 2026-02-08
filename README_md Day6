@@ -1,0 +1,107 @@
+📘 Topic: Hashing
+🎯 Focus Companies: Google, Amazon, Meta, Uber, PayPal
+✅ Today’s Sub-Topics (IN DEPTH)
+
+1️⃣ Frequency Count
+2️⃣ Two Sum using Hash Map
+
+1️⃣ Frequency Count
+🔹 Problem
+
+Count the frequency of each character in a string.
+
+🧠 Python Code (4 lines)
+s="google"
+d={}
+for c in s: d[c]=d.get(c,0)+1
+print(d)
+
+🖥️ Output
+{'g': 2, 'o': 2, 'l': 1, 'e': 1}
+
+📖 Explanation
+
+We create an empty dictionary d.
+
+For each character c:
+
+get(c,0) returns current count (or 0 if not present).
+
+We add 1 and store it back.
+
+Final dictionary stores character → frequency.
+
+⏱️ Interview Insight
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)
+
+🎤 Interview Explanation
+
+“I use a hash map to count occurrences in one pass, giving linear time complexity.”
+
+2️⃣ Two Sum using Hash Map
+🔹 Problem
+
+Check if any two numbers in an array sum to a target.
+
+🧠 Python Code (5 lines)
+a=[2,7,11,15]; t=9
+s=set()
+for x in a:
+    if t-x in s: print(True); break
+    s.add(x)
+
+🖥️ Output
+True
+
+📖 Explanation
+
+We keep a set s of numbers already seen.
+
+For each number x:
+
+Check if target - x exists in the set.
+
+If yes → pair found.
+
+This avoids nested loops.
+
+⏱️ Interview Insight
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)
+
+🎤 Interview Explanation
+
+“Hashing allows me to reduce the time from O(n²) to O(n) by storing visited elements.”
+
+🎤 FAANG Interview Round (Professional Answers)
+
+Q1. What is hashing?
+A: Hashing stores data in key–value format to allow constant-time lookup.
+
+Q2. Why is hashing faster than loops?
+A: Because it avoids repeated comparisons and enables direct access.
+
+Q3. Where is frequency count used?
+A: Anagrams, duplicates, majority element, and substring problems.
+
+Q4. Can Two Sum be solved without hashing?
+A: Yes, using sorting and two pointers, but hashing is faster.
+
+📝 Practice (Easy – ≤ 6 Lines)
+🔹 Frequency Count (Numbers)
+a=[1,2,2,3]
+d={}
+for x in a: d[x]=d.get(x,0)+1
+print(d)
+
+🔹 Two Sum (Index Output – Simple)
+a=[3,2,4]; t=6
+d={}
+for i,x in enumerate(a):
+    if t-x in d: print(d[t-x],i)
+    d[x]=i
